@@ -1,0 +1,827 @@
+'Code simply copies data from a pull of sold products to a weekly updated linked BI sheet for daily update
+
+Sub COPYTOTAFDSALESANALYSIS()
+Dim WB As Workbook
+Dim WS As Worksheet
+Dim WBNAME As String
+
+WBNAME = "Tasty distribution sales"
+
+
+'Barking
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("BARKING").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("BARKING").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Barking"
+
+
+'Belvedere
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("BELVEDERE").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("BELVEDERE").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Belvedere"
+
+
+'Croydon
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CROYDON").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CROYDON").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Croydon"
+
+
+'Dagenham
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("DAGENHAM").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("DAGENHAM").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Dagenham"
+
+
+'Dartford
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("DARTFORD").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("DARTFORD").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Dartford"
+
+
+'Grays
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GRAYS").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GRAYS").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Grays"
+
+
+
+'leyton
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("LEYTON").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("LEYTON").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Leyton"
+
+
+'Peckham
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("PECKHAM").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("PECKHAM").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Peckham"
+
+
+'Stratford
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("STRATFORD").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("STRATFORD").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Stratford"
+
+
+'Streatham
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("STREATHAM").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("STREATHAM").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Streatham"
+
+
+'Woolwich2
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("WOOLWICH 2").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("WOOLWICH 2").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Woolwich 2"
+
+'Woolwich1
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("WOOLWICH 1").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("WOOLWICH 1").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Woolwich 1"
+
+
+
+'Ilford
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ILFORD").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ILFORD").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Ilford"
+
+
+
+'Tilbury
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("TILBURY").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("TILBURY").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Tilbury"
+
+
+'Erith
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ERITH").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ERITH").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Erith"
+
+
+'Catford
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CATFORD").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CATFORD").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Catford"
+
+
+
+'Herbert Road
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("HERBERT ROAD").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("HERBERT ROAD").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Herbert Road"
+
+
+'Chatham
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CHATHAM").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CHATHAM").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Chatham"
+
+'Nathan Way
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("NATHAN WAY").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("NATHAN WAY").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Nathan Way"
+
+
+'Finchley
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("FINCHLEY").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("FINCHLEY").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Finchley"
+
+
+
+'Greenwich
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GREENWICH").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GREENWICH").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Greenwich"
+
+
+'Orpington
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ORPINGTON").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("ORPINGTON").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Orpington"
+
+
+
+'Gravesend
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GRAVESEND").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("GRAVESEND").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Gravesend"
+
+
+
+'Camberwell
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CAMBERWELL").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("CAMBERWELL").Activate
+Range("AA3:AA92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Camberwell"
+
+
+'Plaistow
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("PLAISTOW").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("PLAISTOW").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Plaistow"
+
+
+'Nigeria House
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("NIGERIA HOUSE").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("NIGERIA HOUSE").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Nigeria House"
+
+
+
+'Tottenham
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("TOTTENHAM").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("TOTTENHAM").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Tottenham"
+
+
+'Sittingbourne
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("SITTINGBOURNE").Activate
+Range("A3:A92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, -1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+For Each WB In Application.Workbooks
+    If WB.Name Like WBNAME & "*" Then
+    WB.Activate
+    End If
+Next
+
+Worksheets("SITTINGBOURNE").Activate
+Range("Z3:Z92").Copy
+Workbooks("Total sales analysis for despatch").Activate
+Range("C1").End(xlDown).Offset(1, 1).Select
+ActiveCell.PasteSpecial xlPasteValues
+
+ActiveCell.End(xlDown).Offset(0, -1).Select
+Range(Selection, Selection.End(xlUp).Offset(1, 0)).Value = "Sittingbourne"
+End Sub
